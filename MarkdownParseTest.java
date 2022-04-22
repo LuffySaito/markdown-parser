@@ -100,5 +100,4 @@ public class MarkdownParseTest {
         ArrayList<String> expected = new ArrayList<>(Arrays.asList("a link on the first line"));
         assertEquals(expected, MarkdownParse.getLinks(content));
     }
-
 }
