@@ -1,1 +1,2 @@
-(link.com)[]
+[](somelink.com)
+[
