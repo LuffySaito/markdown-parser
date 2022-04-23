@@ -42,9 +42,16 @@ public class MarkdownParseTest {
     public void testGetLinksForTestFile4() throws IOException {
         Path fileName = Path.of("try-break.md");
         String content = Files.readString(fileName);
-        List<String> expected = List.of("https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "image.png");
+        List<String> expected = List.of(
+            "https://www.youtube.com/watch?v=dQw4w9WgXcQ");
         assertEquals(expected,MarkdownParse.getLinks(content));
+    }
+    @Test 
+    public void testIfActualLink() throws IOException {
+        Path fileName = Path.of("testfarlink.md");
+        String content = Files.readString(fileName);
+        List<String> expected = new ArrayList<>();
+        assertEquals(expected, MarkdownParse.getLinks(content));
     }
     
 }

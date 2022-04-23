@@ -21,7 +21,10 @@ public class MarkdownParse {
             int closeParen = markdown.indexOf(")", openParen);
             String inParen = markdown.substring(openParen + 1, closeParen);
             if(inParen.toLowerCase().endsWith(".jpg") || 
-                inParen.toLowerCase().endsWith(".png")) {}
+                inParen.toLowerCase().endsWith(".png") ||
+                ! inParen.contains(".") || 
+                inParen.indexOf(".") == inParen.length()-1 
+                ) {}
             else {
                 toReturn.add(inParen);
             }
