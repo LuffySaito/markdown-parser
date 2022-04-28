@@ -1,1 +1,2 @@
-)something.link
+)(
+[]something.link)
