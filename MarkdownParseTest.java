@@ -60,5 +60,11 @@ public class MarkdownParseTest {
             "https://www.youtube.com/watch?v=dQw4w9WgXcQ");
     }
 
-    
+    @Test
+    public void oneNewFailureInducingInput() throws IOException {
+        Path fileName = Path.of("One-more-failure.md");
+        String content = Files.readString(fileName);
+        List<String> expected = new ArrayList<>();
+        assertEquals(expected, MarkdownParse.getLinks(content));
+    }
 }
