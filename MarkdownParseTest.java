@@ -55,9 +55,9 @@ public class MarkdownParseTest {
     }
 
     @Test
-    public void aFailingTestNowSuccessful() {
+    public void aFailingtest() {
         assertEquals("https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-            "https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+            "Rick Roll");
     }
 
     
