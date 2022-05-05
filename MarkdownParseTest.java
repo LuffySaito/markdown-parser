@@ -65,6 +65,8 @@ public class MarkdownParseTest {
         Path fileName = Path.of("One-more-failure.md");
         String content = Files.readString(fileName);
         List<String> expected = new ArrayList<>();
+        List<String> unexpected = List.of("Bruh");
+        assertNotEquals(unexpected,MarkdownParse.getLinks(content));
         assertEquals(expected, MarkdownParse.getLinks(content));
     }
 }
