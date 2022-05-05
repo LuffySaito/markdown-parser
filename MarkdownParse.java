@@ -7,6 +7,11 @@ import java.util.ArrayList;
 
 public class MarkdownParse {
     static final int nonexistent = -1;
+
+    /** 
+    *   This method takes in a String and returns all the links within the 
+        String.
+    */
     public static ArrayList<String> getLinks(String markdown) {
         ArrayList<String> toReturn = new ArrayList<>();
         // find the next [, then find the ], then find the (, then read link upto next )
