@@ -69,4 +69,22 @@ public class MarkdownParseTest {
         assertNotEquals(unexpected,MarkdownParse.getLinks(content));
         assertEquals(expected, MarkdownParse.getLinks(content));
     }
+
+    //added test at review
+    @Test
+    public void testReviewTestFile1() throws IOException {
+        Path fileName = Path.of("review-test-file1");
+        String content = Files.readString(fileName);
+        List<String> expected = new ArrayList<>();
+        assertEquals(expected, MarkdownParse.getLinks(content));
+    }
+
+    @Test
+    public void testReviewTestFile2() throws IOException {
+        Path fileName = Path.of("review-test-file2");
+        String content = Files.readString(fileName);
+        List<String> expected = new ArrayList<>();
+        assertEquals(expected, MarkdownParse.getLinks(content));
+    }
+
 }
