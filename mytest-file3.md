@@ -1,2 +1,0 @@
-[](somelink.com)
-[
