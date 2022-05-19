@@ -19,12 +19,17 @@ public class MarkdownParse {
         int currentIndex = 0;
         while(currentIndex < markdown.length()) {
             int openBracket = markdown.indexOf("[", currentIndex);
+<<<<<<< HEAD
             if(openBracket == nonexistent) {
+=======
+            if(openBracket < currentIndex){
+>>>>>>> 367ed90edc6f0ee7a757a15d9ac96823049a2a45
                 break;
             }
             int closeBracket = markdown.indexOf("]", openBracket);
             int openParen = markdown.indexOf("(", closeBracket);
             int closeParen = markdown.indexOf(")", openParen);
+<<<<<<< HEAD
             String inParen = markdown.substring(openParen + 1, closeParen);
             if(inParen.toLowerCase().endsWith(".jpg") || 
                 inParen.toLowerCase().endsWith(".png") ||
@@ -35,6 +40,15 @@ public class MarkdownParse {
             else {
                 toReturn.add(inParen);
             }
+=======
+            if(openParen == -1){
+                break;
+            }
+            if(closeBracket == -1){
+                break;
+            }
+            toReturn.add(markdown.substring(openParen + 1, closeParen));
+>>>>>>> 367ed90edc6f0ee7a757a15d9ac96823049a2a45
             currentIndex = closeParen + 1;
         }
         return toReturn;
